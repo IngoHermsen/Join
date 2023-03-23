@@ -1,0 +1,443 @@
+/* Basics */
+main {
+    width: calc(100vw - 232px);
+    padding: 0px 40px 0px 40px;
+}
+
+
+/* Form */
+
+input, .dropdown, .descriptionTextArea {
+    width: 100%;
+    padding-left: 21px;
+    border-style: none;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--main-white);
+    position: relative;
+}
+
+input, .dropdown {
+    height: 38px;
+    transition: height 225ms !important;
+}
+
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 0px;
+    overflow: hidden;
+}
+
+.dropdown:hover {
+    cursor: pointer;
+}
+
+.dropdown>img {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+
+.dropdown span:not(.colorDot) {
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+    padding-left: 21px;
+}
+
+.dropdown>div>div:hover {
+    background-color: #D1D1D1;
+}
+
+.showCategories {
+    height: 192px;
+}
+
+#categories {
+    max-height: 152px;
+    overflow-y: scroll;
+}
+
+
+.descriptionTextArea {
+    padding-top: 12px;
+    height: 119px;
+    resize: vertical;
+}
+
+.inputIcon {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+    border-right: 1px solid #D1D1D1;
+    border-top: 1px solid #D1D1D1;
+    border-bottom: 1px solid #D1D1D1;
+}
+
+#formWrapper {
+    width: 80%;
+    display: flex;
+    position: relative;
+}
+
+.addTaskForm {
+    width: 100%;
+    display: flex;
+}
+
+.addTaskForm>section {
+    width: 50%;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+
+.requiredAlert {
+    color: var(--field-required);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 120%;
+    height: 12px;
+    margin-top: 8px;
+}
+
+section>div {
+    display: flex;
+    flex-direction: column;
+}
+
+section div:not(:first-of-type) label {
+    margin-top: 14px;
+}
+
+.leftArea {
+    padding-right: 59px;
+    border-right: 1px solid #D1D1D1;
+
+}
+
+.rightArea {
+    padding-left: 59px;
+
+
+}
+
+.inputContainer {
+    position: relative;
+    display: flex;
+}
+
+.dateInput {
+    position: relative;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+    background: url("../img/icon-date-picker.svg") no-repeat;
+    background-size: 20px;
+    position: absolute;
+    right: 5px;
+}
+
+.dateInput::-webkit-calendar-picker-indicator:hover {
+    cursor: pointer;
+}
+
+.prioButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.prioButtons>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    border-style: none;
+    border-color: #D1D1D1;
+    background-color: var(--main-white);
+    border-radius: 10px;
+    height: 51px;
+    width: 120px;
+    padding: 0px 0px 0px 0px;
+}
+
+.prioButtons>button>div {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+}
+
+#prioButton-medium {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.prioButtons>button:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: var(--main-shadow);
+    transform: scale(1.1);
+    transition: transform 225ms;
+}
+
+.prioActive {
+    color: white;
+}
+
+.prioActive img {
+    filter: brightness(0%) invert(120%)
+}
+
+.subtaskInput>.inputContainer img {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+#subtasks {
+    margin-top: 10px;
+}
+
+.subtask {
+    display: flex;
+    width: 250px;
+    margin-bottom: 5px;
+}
+
+.subtask>img {
+    margin-right: 10px;
+}
+
+.submitAndClearButtons {
+    margin: 24px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitAndClearButtons button:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.colorDot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border: 1.5px solid var(--main-white);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.dotShadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* new Category */
+
+.newEntryInput {
+    display: none;
+    position: relative;
+}
+
+.newEntryInput input {
+    margin-bottom: 15px;
+}
+
+.confirmOrCancel {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    padding: 0px 5px;
+}
+
+.confirmOrCancel:hover {
+    cursor: pointer;
+}
+
+.confirmOrCancel img {
+    height: 10.49px;
+    padding: 0px 10px;
+}
+
+.confirmOrCancel div:nth-last-of-type(2) {
+    border-right: 1px solid #D1D1D1;
+}
+
+.colorSelWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#colorSelection {
+    width: 200px;
+
+}
+
+#colorSelection>.colorDot:hover {
+    cursor: pointer;
+}
+
+#colorSelection>.colorDot:active {
+    cursor: pointer;
+    border: 1.5px solid var(--main-white);
+}
+
+
+#colorSelAlert {
+    display: none;
+    margin: 0px;
+    font-size: 14px;
+}
+
+/* assign contacts */
+
+.showContactSelection {
+    height: 192px;
+}
+
+#contactSelection {
+    max-height: 152px;
+    overflow-y: scroll;
+}
+
+#contactSelection span {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+
+.assignCheckbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 13px;
+    width: 13px;
+    border: 1px solid var(--main-black);
+    border-radius: 3px;
+    background-color: var(#b6b3b3);
+
+}
+
+.assignChecked {
+    display: none;
+    height: 6px;
+    width: 6px;
+    border: 1px solid var(--main-black);
+    border-radius: 2px;
+    background-color: var(--main-black);
+
+}
+
+#nameCircles {
+    display: flex;
+    margin-top: 10px;
+}
+
+#nameCircles span {
+    margin: 0px -10px 24px 0px;
+}
+
+#mailNotFoundAlert {
+    display: none;
+    margin: 0px 0px 10px 0px;
+    font-size: 14px;
+}
+
+/* subtask Input */
+
+.subtaskInput .confirmOrCancel {
+    display: none;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1440px) {
+
+    .prioButtons button {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1290px) {
+    #formWrapper {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .addTaskForm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .addTaskForm>section {
+        padding: 0px;
+        border: unset;
+        width: 80%;
+    }
+
+    .submitAndClearButtons {
+        justify-content: center;
+    }
+
+    .prioButtons button {
+        flex-direction: column;
+    }
+
+    .prioButtons button div {
+        margin: 5px 0px 0px 0px;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    body {
+        overflow: hidden;
+    }
+
+    main {
+        height: calc(100vh - 160px);
+        width: 100%;
+        padding: 0px 60px 0px 60px !important;
+        margin: 80px 0px;
+        overflow-y: scroll;
+        justify-content: unset;
+    }
+
+    .submitAndClearButtons {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    main {
+        width: 100%;
+        padding: 0px 15px 0px 15px !important;
+    }
+
+    .addTaskForm>section {
+        width: 100%;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <script src="mini_backend.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/add_task.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="styles/font.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/aside.css" />
+    <title>Join - Legal notice</title>
+  </head>
+
+  <body onload="activatePage(5), loadCurrentUser()">
+    <!-- header template -->
+    <div w3-include-html="includes/header.html"></div>
+    <!-- header template END -->
+
+    <!-- aside template -->
+    <div w3-include-html="includes/aside.html"></div>
+    <!-- aside template END -->
+
+    <main>
+      <div class="main-container">
+        <div class="content-container">
+          <div class="content-title">
+            <h1>Legal notice</h1>
+            <a href="summary.html"><img id="arrow-left-content" src="./img/icon-arrow-left.svg" alt="" /></a>
+          </div>
+          <div class="impressum-content">
+            <h2>According to § 5 TMG</h2>
+            <p>
+              Ingo Hermsen<br />
+              Hildegard von Bingen-Straße 8 <br/>
+              47652 Weeze
+            </p>
+            <h2>Contact</h2>
+            <p>
+              Telephone: +49 (0) 123 44 55 66<br />
+              Fax: +49 (0) 123 44 55 99<br />
+              E-Mail: ingohermsen@gmail.com
+            </p>
+            <p>
+              Source:
+              <a href="https://www.e-recht24.de/impressum-generator.html"
+                target="_blank">https://www.e-recht24.de/impressum-generator.html</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="includes.js" defer></script>
+  </body>
+
+</html>
